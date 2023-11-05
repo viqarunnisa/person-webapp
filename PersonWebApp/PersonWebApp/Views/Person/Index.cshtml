@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "People";
     Person firstPerson = null;
+    var successMessage = TempData["Message"]?.ToString();
 }
 
 @if (Model != null && Model.Count() > 0)
@@ -11,6 +12,12 @@
 
 <h1>People</h1>
 
+@if(!string.IsNullOrWhiteSpace(successMessage))
+{
+    <div class="alert-success">
+        @successMessage
+    </div>
+}
 <p>
     <a asp-action="Add">Add New</a>
 </p>

@@ -16,7 +16,7 @@ namespace PersonWebApp.Controllers
 
 
         /// <summary>
-        /// 
+        /// View all person available
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
@@ -42,6 +42,7 @@ namespace PersonWebApp.Controllers
             if (ModelState.IsValid)
             {
                 _personService.AddPerson(person);
+                TempData["Message"] = $"New person {person.FirstName} {person.LastName} has been successfully added!";
                 return RedirectToAction(nameof(Index));
             }
 
