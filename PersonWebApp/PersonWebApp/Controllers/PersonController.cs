@@ -16,7 +16,7 @@ namespace PersonWebApp.Controllers
 
 
         /// <summary>
-        /// 
+        /// View all person available
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
